@@ -176,7 +176,7 @@ class EmployeesController extends Controller
             //Upload the image
             $fileNameToStore = $this->handleImageUpload($request);
             //Delete the previous image
-            Storage::delete('public/employee_images/'.$employee->picture);
+            Storage::delete('employee_images/'.$employee->picture);
         }else{
             $fileNameToStore = '';
         }
@@ -199,7 +199,7 @@ class EmployeesController extends Controller
     {
         $employee = Employee::find($id);
         $employee->delete();
-        Storage::delete('public/employee_images/'.$employee->picture);
+        Storage::delete('employee_images/'.$employee->picture);
         return redirect('/employees')->with('info','Selected Employee has been deleted!');
     }
 
@@ -341,7 +341,7 @@ class EmployeesController extends Controller
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             
             //upload the image
-            $path = $request->file('picture')->storeAs('public/employee_images',$fileNameToStore);
+            $path = $request->picture->storeAs('employee_images',$fileNameToStore);
             return $fileNameToStore;
         }
         /**

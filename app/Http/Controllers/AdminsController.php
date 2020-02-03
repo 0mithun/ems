@@ -86,7 +86,7 @@ class AdminsController extends Controller
         if($request->hasFile('picture')){
 
             $fileNameToStore = $this->handleImageUpload($request);
-            Storage::delete('public/admins/'.$admin->picture);
+            Storage::delete('admins/'.$admin->picture);
         }else{
             $fileNameToStore = '';
         }
@@ -115,7 +115,7 @@ class AdminsController extends Controller
         $admin = Admin::find($id);
 
         //delete the admin picture
-        Storage::delete('public/admins/'.$admin->picture);
+        Storage::delete('admins/'.$admin->picture);
         $admin->delete();
         return redirect('/admins')->with('info','selected admin has been deleted!');
     }
@@ -197,7 +197,8 @@ class AdminsController extends Controller
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             
             //upload the image
-            $path = $request->file('picture')->storeAs('public/admins' , $fileNameToStore);
+            // $path = $request->file('picture')->storeAs('public/admins' , $fileNameToStore);
+            $path = $request->picture->storeAs('admins' , $fileNameToStore);
         }
         /**
          *  return the file name so we can add it to database.
