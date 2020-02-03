@@ -8,7 +8,7 @@
                     <!-- Show this image on small devices -->
                     <div class="hide-on-med-only hide-on-large-only row">
                         <div class="col s8 offset-s2 mt-20">
-                            <img class="p5 card-panel emp-img-big" src="{{asset('storage/employee_images/'.$employee->picture)}}">
+                            <img class="p5 card-panel emp-img-big" src="{{asset('images/employee_images/'.$employee->picture)}}">
                         </div>
                     </div>
                     <div class="col m8 l8 xl8">
@@ -19,7 +19,7 @@
                     </div>
                     <!-- Hide this image on small devices -->
                     <div class="hide-on-small-only col m4 l4 xl3">
-                        <img class="p5 card-panel emp-img-big" src="{{asset('storage/employee_images/'.$employee->picture)}}">
+                        <img class="p5 card-panel emp-img-big" src="{{asset('images/employee_images/'.$employee->picture)}}">
                     </div>
                 </div>
                 <div class="collection">

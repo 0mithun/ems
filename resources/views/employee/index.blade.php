@@ -64,7 +64,7 @@
                                 <tr>
                                     <td>{{$employee->id}}</td>
                                     <td>
-                                    <img class="emp-img" src="{{asset('storage/employee_images/'.$employee->picture)}}">
+                                    <img class="emp-img" src="{{asset('images/employee_images/'.$employee->picture)}}">
                                     </td>
                                     <td>{{$employee->first_name}} {{$employee->last_name}}</td>
                                     <td>{{$employee->empDepartment->dept_name}}</td>

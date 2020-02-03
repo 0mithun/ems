@@ -63,7 +63,7 @@
                                     <tr>
                                         <td>{{$admin->id}}</td>
                                         <td>
-                                            <img class="emp-img" src="{{asset('storage/admins/'.$admin->picture)}}">
+                                            <img class="emp-img" src="{{asset('images/admins/'.$admin->picture)}}">
                                         </td>
                                         <td>{{$admin->first_name}} {{$admin->last_name}}</td>
                                         <td>{{$admin->username}}</td>
