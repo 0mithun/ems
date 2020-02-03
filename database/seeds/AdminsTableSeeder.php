@@ -19,7 +19,7 @@ class AdminsTableSeeder extends Seeder
         $admin->username = 'admin';
         $admin->email = 'admin@admin.com';
         $admin->password = bcrypt('password');
-        $admin->picture =  'images/admins/admin.png';
+        $admin->picture =  'admin.png';
         $admin->save();
     }
 }
